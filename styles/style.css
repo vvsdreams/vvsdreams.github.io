@@ -13,7 +13,7 @@
     display: grid;
     grid-auto-flow:dense;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .1fr 3fr 3fr .1fr;
+    grid-template-rows: .1fr 1fr 3fr .1fr;
     gap: 10px 10px;
     align-items:start;
 }
@@ -232,7 +232,6 @@ a:hover{
 }
 .images:hover{
     width:400px;
-    cursor: pointer;
 }
 .images:hover h3{
     opacity:1;
@@ -330,4 +329,5 @@ body{
     #blogpostContentBox{
         margin-top:-25px;
     }
+
 }
