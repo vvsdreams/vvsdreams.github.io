@@ -1,6 +1,6 @@
-@import url("style2.css");
-@import url("style3.css");
-@import url("style4.css");
+@import url("../styles/style2.css");
+@import url("../styles/style3.css");
+@import url("../styles/style4.css");
 /*Essential Formatting*/
 * {
     margin:0;
@@ -13,8 +13,9 @@
     display: grid;
     grid-auto-flow:dense;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .1fr 1fr 1fr;
+    grid-template-rows: .1fr 3fr 3fr .1fr;
     gap: 10px 10px;
+    align-items:start;
 }
 #blogpostGrid{
     grid-template-rows:.1fr .1fr .1fr;
@@ -119,39 +120,39 @@ a:hover{
 #blog1{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/photography.jpg);
+    background-image: url("../Images/photography.jpg");
 }
 #blog2{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/saturatedwebsite.png);
+    background-image: url("../Images/saturatedwebsite.png");
 }
 #blog3{
     background-size: cover;
     background-position: center;
-    background-image: url("Images/webdesign.jpg");
+    background-image: url("../Images/webdesign.jpg");
 }
 /*Photography Page Images*/
 #pIMG1{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/photography4.jpg);
+    background-image: url("../Images/photography4.jpg");
 }
 #pIMG2{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/photography3.jpg);
+    background-image: url("../Images/photography3.jpg");
 }
 #pIMG3{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/photography2.jpg);
+    background-image: url("../Images/photography2.jpg");
 }
 /*Web Design Page Images*/
 #wIMG1{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/webdesign1.png);
+    background-image: url("../Images/webdesign1.png");
 }
 #wIMG1 h3{ /*Text on White BG Fix*/
     color: #363636;
@@ -160,7 +161,7 @@ a:hover{
 #wIMG2{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/webdesign2.png);
+    background-image: url("../Images/webdesign2.png");
 }
 #wIMG2 h3 { /*Text on White BG Fix*/
     color: #363636;
@@ -169,56 +170,56 @@ a:hover{
 #wIMG3{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/webdesign3.png);
+    background-image: url("../Images/webdesign3.png");
 }
 /*Programming Page Images*/
 #prIMG1{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/programming4.webp);
+    background-image: url("../Images/programming4.webp");
 }
 #prIMG2{
 
     background-size: cover;
     background-position: center;
-    background-image: url(Images/programming2.webp);
+    background-image: url("../Images/programming2.webp");
 }
 #prIMG3{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/programming3.jpg);
+    background-image: url("../Images/programming3.jpg");
 }
 /*Contact Page Images*/
 #cIMG1{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/contact1.jpg);
+    background-image: url("../Images/contact1.jpg");
 }
 #cIMG2{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/contact2.jpg);
+    background-image: url("../Images/contact2.jpg");
 }
 #cIMG3{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/contact3.jpg);
+    background-image: url("../Images/contact3.jpg");
 }
 /*About Page Images*/
 #aIMG1{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/about2.jpg);
+    background-image: url("../Images/about2.jpg");
 }
 #aIMG2{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/about1.jpg);
+    background-image: url("../Images/about1.jpg");
 }
 #aIMG3{
     background-size: cover;
     background-position: center;
-    background-image: url(Images/about3.jpg);
+    background-image: url("../Images/about3.jpg");
 }
 /*Gallery Stretch Animation + Text Popup*/
 .images h3{
