@@ -81,3 +81,22 @@ button{
     background-color: #e7e7e7;
     cursor:pointer;
 }
+.projectsBox{
+    width:100%;
+    height:100vh;
+    /*background: #F8C4B4;*/
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    grid-column:2;
+    grid-row:2;
+}
+
+.swiper{
+    width:80%;
+    height:fit-content;
+}
+
+.swiper-slide iframe{
+    width:100%;
+}

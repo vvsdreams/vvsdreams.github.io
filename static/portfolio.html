@@ -4,6 +4,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width">
     <title>Programming</title>
     <link href="../styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Inter&family=Montserrat&family=Work+Sans&display=swap" rel="stylesheet">
@@ -19,12 +20,62 @@
             <li><a href="portfolio.html" id="portfolio">Portfolio</a></li>
         </ol>
     </nav>
-    <div class="youtubeBox">
-        <h1>Some of my Favorite Projects</h1>
-        <iframe class="YT" width="1038" height="513" src="https://www.youtube.com/embed/0Yv_7QST4r4" title="U-Turn - MixeraBenji$ (Official Music Video) [ Shot by : SaturatedDepictions ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="YT" width="1038" height="513" src="https://www.youtube.com/embed/X_hB4yWSf_w" title="GSKI - Saint Laurent (OFFICIAL VIDEO)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="YT" width="1038" height="513" src="https://www.youtube.com/embed/83tYDx_3sRg" title="Caution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="projectsBox">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><iframe width="1038" height="513" src="https://www.youtube.com/embed/WYd4NNngiAk?html5=1&rel=0&enablejsapi=1" title="Rich Off Swagg Pt 2 (official video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="1038" height="513" src="https://www.youtube.com/embed/X_hB4yWSf_w?html5=1&rel=0&enablejsapi=1" title="GSKI - Saint Laurent (OFFICIAL VIDEO)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="1038" height="513" src="https://www.youtube.com/embed/0Yv_7QST4r4?html5=1&rel=0&enablejsapi=1" title="U-Turn - MixeraBenji$ (Official Music Video) [ Shot by : SaturatedDepictions ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
     </div>
+    <div class="contactBox">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            autoplay: false,
+            observer: true,
+            slidesPerView: 'auto',
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            //pause video on slide change
+            on: {
+                slideChange: function (el) {
+                    let prevSlide = this.slides[this.previousIndex];
+                    let prevPlayer = prevSlide.querySelector('iframe');
+                    prevPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
+                    let currentSlide = this.slides[this.activeIndex];
+                    let currentPlayer = currentSlide.querySelector('iframe');
+                    currentPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                }
+            }
+        });
+    </script>
 </section>
 </body>
 </html>

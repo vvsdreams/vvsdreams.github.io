@@ -8,6 +8,11 @@
 .youtubeBox h2{
     animation: projectHeader infinite 5s ease-in-out;
 }
+#portfolioGrid{
+    display:grid;
+    grid-template-rows: .1fr 5fr .1fr;
+    grid-template-columns: .1fr 1fr .1fr;
+}
 @keyframes projectHeader{
     0%{
         color: #fff9f1;
