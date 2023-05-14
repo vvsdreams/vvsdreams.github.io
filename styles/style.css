@@ -351,4 +351,10 @@ body{
         opacity:1;
         margin: 250px 0 0 10px;
     }
+    .images:hover{
+        width:300px;
+    }
+    .images:hover h3{
+      margin: 250px 0 0 10px;
+    }
 }
